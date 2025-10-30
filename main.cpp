@@ -1,5 +1,5 @@
 #include <stdio.h>
-int Print(int d) {
+void Print(int d) {
     if (d==1) {
         printf("大安：大安事事昌，求谋在东方，失物去不远，宅舍保安康，行人身未动，病者主无妨，将军回田野，仔细与推详。\n");
     }
@@ -36,13 +36,11 @@ int Third(int n3) {
 }
 int main() {
 
-    int Num1,Num2,Num3,re;
+    int Num1,Num2,Num3;
     scanf("%d %d %d",&Num1,&Num2,&Num3);
-    re=First(Num1);
-    printf("\t");
+    int re=First(Num1);
     Num2=Num2+re-1;
     re=Second(Num2);
-    printf("\t");
     Num3=Num3+re-1;
     Third(Num3);
 }
